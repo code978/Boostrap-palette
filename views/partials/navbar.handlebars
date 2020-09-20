@@ -1,0 +1,21 @@
+{{#if user}}
+<nav class="white z-depth-2">
+    <div class="nav-wrapper container">
+        <a href="/dashboard" class="brand-logo black-text">welcome! {{user.fullname}} | Boostrap palette</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/dashboard/logout" class="btn waves-effect waves-light orange">logout</a></li>
+        </ul>
+    </div>
+</nav>
+{{else}}
+<nav class="orange z-depth-2">
+    <div class="nav-wrapper container">
+        <a href="/" class="brand-logo">Bootstrap palette</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/">Theme</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Feedback</a></li>
+        </ul>
+    </div>
+</nav>
+{{/if}}

@@ -1,0 +1,21 @@
+body {
+    font-family: "Rubik";
+  }
+  
+  .theme__plate {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template-rows: 30px 30px;
+  }
+  .theme__plate > div {
+    border-radius: 3px;
+  }
+  
+  .color-plate {
+    height: 40px;
+    border-radius: 5px;
+  }
+  
+  

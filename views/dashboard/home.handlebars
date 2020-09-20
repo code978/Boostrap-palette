@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="col m9">
+        <div class="row">
+            {{>themes}}
+        </div>
+    </div>
+    <div class="col m3">
+        <div class="card">
+            <div class="card-content">
+                <form {{#if currentTheme}} action="/themes?_method=PUT" {{else}} action="/themes" {{/if}}method="POST">
+                    {{#if currentTheme}}
+                    <input type="hidden" name="themeId" value="{{currentTheme._id}}" />
+                    {{/if}}
+                    <div class="input-field">
+                        <input placeholder="Your theme" type="text" class="validate" name="theme"
+                            value="{{currentTheme.theme}}">
+                        <label>Theme Name</label>
+                    </div>
+
+                    <div class="input-field">
+                        <input placeholder="Primary Color" type="text" class="validate" name="primary"
+                            value="{{currentTheme.primary}}">
+                        <label>Primary</label>
+                    </div>
+                    <div class="input-field">
+                        <input placeholder="Secondary Color" type="text" class="validate" name="secondary"
+                            value="{{currentTheme.secondary}}">
+                        <label>Secondary</label>
+                    </div>
+                    <div class="input-field">
+                        <input placeholder="Success Color" type="text" class="validate" name="success"
+                            value="{{currentTheme.success}}">
+                        <label>Success</label>
+                    </div>
+                    <div class="input-field">
+                        <input placeholder="Danger Color" type="text" class="validate" name="danger"
+                            value="{{currentTheme.danger}}">
+                        <label>Danger</label>
+                    </div>
+                    <div class="input-field">
+                        <input placeholder="Warning Color" type="text" class="validate" name="warning"
+                            value="{{currentTheme.warning}}">
+                        <label>Warning</label>
+                    </div>
+                    <div class="input-field">
+                        <input placeholder="Info Color" type="text" class="validate" name="info"
+                            value="{{currentTheme.info}}">
+                        <label>Info</label>
+                    </div>
+                    {{#if currentTheme}}
+                    <button class="waves-effect waves-light btn orange">Update Theme</button>
+                    <a href="/themes" class="waves-effect waves-light btn black">cancel</a>
+
+                    {{else}}
+                    <button class="waves-effect waves-light btn">Theme Create</button>
+                    {{/if}}
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

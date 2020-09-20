@@ -1,0 +1,46 @@
+{{#each themes}}
+<div class="col m4">
+    <div class="card">
+        <div class="card-content">
+            <strong class="card-title">{{theme}}</strong>
+            <div class="theme__plate">
+                <div style="background-color:{{primary}}"></div>
+                <div style="background-color:{{secondary}}"></div>
+                <div style="background-color:{{success}}"></div>
+                <div style="background-color:{{danger}}"></div>
+                <div style="background-color:{{warning}}"></div>
+                <div style="background-color:{{info}}"></div>
+            </div>
+        </div>
+
+        <div class="card-action">
+            <div class="row">
+                <div class="col s6">
+                    <a href="/themes/{{theme}}" class="btn waves-effect waves-light blue">preview</a>
+                </div>
+                <div class="col s6">
+                    <a href="/themes/{{theme}}/download"
+                        class="btn waves-effect waves-light blue lighten-3 right">download</a>
+                </div>
+            </div>
+        </div>
+
+        {{#if ../user}}
+        <div class="card-action">
+            <div class="row">
+                <div class="col s6">
+                    <a class="waves-effect waves-light btn" href="/themes?themeId={{_id}}">Update</a>
+                </div>
+                <div class="col s6">
+                    <form method="POST" action="/themes?_method=DELETE">
+                        <input type="hidden" name="themeId" value="{{_id}}" />
+                        <button type="submit" class="right  waves-effect waves-light btn">Remove</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        {{/if}}
+    </div>
+</div>
+{{/each}}
