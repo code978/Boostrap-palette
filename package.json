@@ -1,12 +1,12 @@
 {
-  "name": "botstrap-themer",
+  "name": "botstrap-pallete",
   "version": "1.0.0",
-  "description": "A simple bootstrap theming web application based on expressjs",
+  "description": "A simple bootstrap theming web application based on Mern Stack.",
   "main": "app.js",
   "scripts": {
-    "start": "node app"
+    "start": "node app.js"
   },
-  "author": "Subroto Biswas",
+  "author": "Kunal",
   "license": "MIT",
   "dependencies": {
     "@handlebars/allow-prototype-access": "^1.0.3",
